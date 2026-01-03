@@ -1,0 +1,95 @@
+{
+  "datasets": [
+    {
+      "name": "fb7f766f",
+      "displayName": "Location data",
+      "queryLines": [
+        "SELECT latitude, longitude, `GHG emissions mtons CO2e` AS Emissions\r\n",
+        "FROM emissions.default.emissions_data"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "551520ea",
+      "displayName": "Untitled page",
+      "layout": [
+        {
+          "widget": {
+            "name": "564f084a",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "fb7f766f",
+                  "fields": [
+                    {
+                      "name": "latitude",
+                      "expression": "`latitude`"
+                    },
+                    {
+                      "name": "longitude",
+                      "expression": "`longitude`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "symbol-map",
+              "encodings": {
+                "coordinates": {
+                  "latitude": {
+                    "fieldName": "latitude"
+                  },
+                  "longitude": {
+                    "fieldName": "longitude"
+                  }
+                }
+              },
+              "mark": {
+                "size": -2.1
+              },
+              "frame": {
+                "showTitle": false
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 3,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "b9b3f82e",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 24px;\">United States Emissions Breakdown </span></span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 14px;\">This data was collected by the EPA (Enviromental Protection Agency) in 2023</span></span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
